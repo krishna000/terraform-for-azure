@@ -26,3 +26,12 @@ module "storage_account" {
   location             = module.resource_group.resource_group_location
   storage_account_name = var.storage_account_name
 }
+
+module "key_vault" {
+  source               = "./modules/key-vault"
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = module.resource_group.resource_group_name
+  location             = var.location
+  tenant_id            = var.tenant_id
+  example_secret_value = var.example_secret_value
+}

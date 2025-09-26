@@ -15,3 +15,16 @@ variable "storage_account_name" {
   type        = string
   description = "Globally unique storage account name"
 }
+
+variable "key_vault_name" {
+  type        = string
+  description = "Name of key Vault"
+}
+
+variable "tenant_id" {
+  type = string
+}
+
+variable "example_secret_value" {
+  type = string
+}
