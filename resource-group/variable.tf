@@ -9,3 +9,8 @@ variable "location" {
   type        = string
   default     = "East US"
 }
+
+variable "subscription_id" {
+  description = "To pass the subscription id for resources"
+  type        = string
+}
