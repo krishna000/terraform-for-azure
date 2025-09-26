@@ -7,6 +7,7 @@ variable "resource_group_name" {
   type = string
 }
 
-variable "subscription_id" {
+variable "location" {
   type = string
+  description = "Azure region for storage account"
 }
