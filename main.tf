@@ -1,16 +1,3 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "4.32.0"
-    }
-  }
-}
-provider "azurerm" {
-  features {}
-  subscription_id = var.subscription_id
-}
-
 # Resource Group Module
 module "resource_group" {
   source              = "./modules/resource-group"
@@ -34,4 +21,14 @@ module "key_vault" {
   location             = var.location
   tenant_id            = var.tenant_id
   example_secret_value = var.example_secret_value
+}
+
+module "aks" {
+  source               = "./modules/aks"
+  example_secret_value = var.aks_name
+  key_vault_name       = module.resource_group.name
+  resource_group_name  = var.location
+  storage_account_name = var.dns_prefix
+  subscription_id      = var.node_count
+  tenant_id            = var.node_size
 }

@@ -28,3 +28,19 @@ variable "tenant_id" {
 variable "example_secret_value" {
   type = string
 }
+
+variable "aks_name" {
+  type = string
+}
+
+variable "dns_prefix" {
+  type = string
+}
+
+variable "node_count" {
+  type = number
+}
+
+variable "node_size" {
+  type = number
+}
