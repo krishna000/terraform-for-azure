@@ -46,6 +46,6 @@ variable "node_count" {
   type = number
 }
 
-variable "node_size" {
+variable "vm_size" {
   type = number
 }
