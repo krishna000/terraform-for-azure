@@ -47,5 +47,3 @@ terraform-for-azure/
 ├── variables.tf
 ├── outputs.tf
 └── README.md
-
-
