@@ -1,4 +1,4 @@
-name: Terraform CI
+name: Terraform CI (Docker)
 
 on:
   push:
@@ -11,24 +11,21 @@ on:
 
 jobs:
   terraform:
-    name: Terraform Init & Validate
+    name: Terraform Init & Validate (Docker)
     runs-on: ubuntu-latest
+
+    container:
+      image: hashicorp/terraform:1.13.3   # Use Terraform 1.13.3
 
     steps:
       # Step 1: Checkout repository
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Set up Terraform
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2
-        with:
-          terraform_version: 1.6.0
-
-      # Step 3: Initialize Terraform
+      # Step 2: Terraform Init
       - name: Terraform Init
         run: terraform init
 
-      # Step 4: Validate Terraform
+      # Step 3: Terraform Validate
       - name: Terraform Validate
         run: terraform validate
