@@ -1,9 +1,9 @@
-output "key_vault_id" {
+output "id" {
   description = "The ID of the key vault"
   value = azurerm_key_vault.kv.id
 }
 
-output "key_vault_name" {
+output "name" {
   description = "The name of the Key Vault"
   value = azurerm_key_vault.kv.name
 }

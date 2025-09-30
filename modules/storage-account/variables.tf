@@ -1,9 +1,10 @@
 variable "storage_account_name" {
   type        = string
-  description = "The name of storage account"
+  description = "Globally unique storage account name"
 }
 
 variable "resource_group_name" {
+  description = "RG name where storage account will get created"
   type = string
 }
 

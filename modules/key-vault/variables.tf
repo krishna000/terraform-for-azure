@@ -15,9 +15,5 @@ variable "location" {
 
 variable "tenant_id" {
   description = "Azure AD Tenant ID for key Vault"
-}
-
-variable "example_secret_value" {
-  description = "A sample secret to store in the key vault"
   type = string
 }

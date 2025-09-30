@@ -1,9 +1,9 @@
 output "resource_group_name" {
-  value = module.resource_group.resource_group_name
+  value = module.resource_group.name
 }
 
 output "resource_group_location" {
-  value = module.resource_group.resource_group_name
+  value = module.resource_group.location
 }
 
 output "storage_account_name" {
@@ -15,9 +15,17 @@ output "storage_account_id" {
 }
 
 output "key_vault_name" {
-  value = module.key_vault.key_vault_name
+  value = module.key_vault.name
 }
 
 output "key_vault_id" {
-  value = module.key_vault.key_vault_id
+  value = module.key_vault.id
+}
+
+output "aks_name" {
+  value = module.aks.name
+}
+
+output "aks_fqdn" {
+  value = module.aks.fqdn
 }

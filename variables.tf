@@ -1,14 +1,18 @@
 variable "subscription_id" {
-  type = string
+  description = "Azure Subscription Id"
+  type        = string
 }
 
 variable "resource_group_name" {
-  type = string
+  description = "Name of the Azure Resource Group"
+  type        = string
+  default     = "tf-rg-lesson"
 }
 
 variable "location" {
-  type    = string
-  default = "East US"
+  description = "Azure region for all resources"
+  type        = string
+  default     = "eastus"
 }
 
 variable "storage_account_name" {
@@ -22,7 +26,8 @@ variable "key_vault_name" {
 }
 
 variable "tenant_id" {
-  type = string
+  description = "Azure tenant ID"
+  type        = string
 }
 
 variable "example_secret_value" {
