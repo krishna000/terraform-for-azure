@@ -29,3 +29,15 @@ output "aks_name" {
 output "aks_fqdn" {
   value = module.aks.fqdn
 }
+
+output "vnet_id" {
+  value = module.virtual_network.vnet_id
+}
+
+output "subnet_aks_id" {
+  value = module.virtual_network.subnet_aks_id
+}
+
+output "subnet_backend_id" {
+  value = module.virtual_network.subnet_backend_id
+}

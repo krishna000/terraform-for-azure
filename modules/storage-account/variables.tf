@@ -5,10 +5,10 @@ variable "storage_account_name" {
 
 variable "resource_group_name" {
   description = "RG name where storage account will get created"
-  type = string
+  type        = string
 }
 
 variable "location" {
-  type = string
+  type        = string
   description = "Azure region for storage account"
 }

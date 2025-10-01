@@ -30,3 +30,14 @@ module "aks" {
   resource_group_name = module.resource_group.name
   location            = module.resource_group.location
 }
+
+module "virtual_network" {
+  source                = "./modules/virtual-network"
+  resource_group_name   = module.resource_group.name
+  location              = module.resource_group.location
+  vnet_name             = "tf-vnet"
+  subnet_aks_name       = "subnet-aks"
+  subnet_aks_prefix     = "10.0.1.0/24"
+  subnet_backend_name   = "subnet-backend"
+  subnet_backend_prefix = "10.0.2.0/24"
+}
