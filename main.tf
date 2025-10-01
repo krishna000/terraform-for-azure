@@ -43,8 +43,8 @@ module "virtual_network" {
 }
 
 module "rbac" {
-  source = "./modules/rbac"
+  source            = "./modules/rbac"
   resource_group_id = module.resource_group.id
-  role_name = var.rbac_role_name
-  principal_id = var.rbac_principal_id
+  role_name         = var.rbac_role_name
+  principal_id      = var.rbac_principal_id
 }

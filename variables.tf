@@ -51,12 +51,12 @@ variable "vm_size" {
 }
 
 variable "rbac_principal_id" {
-  type = string
+  type        = string
   description = "Object ID of the user, group, or service principal"
 }
 
 variable "rbac_role_name" {
-  type = string
+  type        = string
   description = "Name of the role to assign in the Resource Group"
-  default = "Reader"
+  default     = "Reader"
 }
