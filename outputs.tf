@@ -41,3 +41,7 @@ output "subnet_aks_id" {
 output "subnet_backend_id" {
   value = module.virtual_network.subnet_backend_id
 }
+
+output "rbac_role_assignment_id" {
+  value = module.rbac.role_assignment_id
+}

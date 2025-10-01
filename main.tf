@@ -41,3 +41,10 @@ module "virtual_network" {
   subnet_backend_name   = "subnet-backend"
   subnet_backend_prefix = "10.0.2.0/24"
 }
+
+module "rbac" {
+  source = "./modules/rbac"
+  resource_group_id = module.resource_group.id
+  role_name = var.rbac_role_name
+  principal_id = var.rbac_principal_id
+}
