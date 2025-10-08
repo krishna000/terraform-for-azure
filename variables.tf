@@ -60,3 +60,14 @@ variable "rbac_role_name" {
   description = "Name of the role to assign in the Resource Group"
   default     = "Reader"
 }
+variable "container_name" {
+  description = "The name of the storage container to create"
+  type        = string
+  default     = "app-container"
+}
+
+variable "container_access_type" {
+  description = "Access level of the Storage container"
+  type        = string
+  default     = "private"
+}

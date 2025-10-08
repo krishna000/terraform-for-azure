@@ -48,3 +48,11 @@ module "rbac" {
   role_name         = var.rbac_role_name
   principal_id      = var.rbac_principal_id
 }
+
+module "blob_container" {
+  source                = "./modules/blob-container"
+  container_name        = var.container_name
+  storage_account_id    = module.storage_account.id
+  container_access_type = var.container_access_type
+
+}

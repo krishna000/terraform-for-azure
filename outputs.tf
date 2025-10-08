@@ -45,3 +45,12 @@ output "subnet_backend_id" {
 output "rbac_role_assignment_id" {
   value = module.rbac.role_assignment_id
 }
+output "blob_container_name" {
+  value       = module.blob_container.container_name
+  description = "The name of the created Blob container"
+}
+
+output "blob_container_id" {
+  value       = module.blob_container.container_id
+  description = "The ID of the created Blob Container"
+}
